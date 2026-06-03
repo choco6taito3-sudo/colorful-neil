@@ -21,16 +21,29 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png"
+  },
   openGraph: {
     title: site.name,
     description: site.description,
     type: "website",
-    locale: "ja_JP"
+    locale: "ja_JP",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1024,
+        height: 1024,
+        alt: `${site.name} ロゴ`
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: site.name,
-    description: site.description
+    description: site.description,
+    images: ["/og-image.png"]
   },
   robots: {
     index: true,

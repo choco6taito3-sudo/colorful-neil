@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/Logo";
 import { site, telHref } from "@/lib/site";
 import { NavLink } from "@/components/ui/NavLink";
 import { ButtonLink } from "@/components/ui/Button";
@@ -8,9 +9,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center gap-3">
-          <div className="grid size-10 place-items-center rounded-2xl bg-gradient-to-br from-coral-500 via-lavender-500 to-peach-400 text-xs font-black text-white shadow-glow">
-            cn
-          </div>
+          <Logo size="md" />
           <div className="leading-tight">
             <div className="text-sm font-bold text-slate-50">{site.name}</div>
             <div className="text-xs font-semibold text-slate-500">
